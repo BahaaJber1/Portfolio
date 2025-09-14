@@ -1,8 +1,10 @@
+// vscode autocompletion
+
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./src/*"]
-		}
-	}
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "paths": {
+            "@/": ["./src/*"]
+        }
+    }
 }
