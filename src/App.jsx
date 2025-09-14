@@ -1,7 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Applayout from "./ui/Applayout";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 function App() {
+    const darkMode = useSelector((state) => state.darkMode.darkMode);
+
+    useEffect(() => {
+        if (darkMode) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    }, [darkMode]);
+
     return (
         <BrowserRouter>
             <Routes>
