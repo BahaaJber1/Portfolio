@@ -43,6 +43,7 @@ function Header() {
                     variant="secondary"
                     onClick={handleToggleDarkMode}
                 >
+                    {/* Fix the animation later and colors later */}
                     <AnimatePresence mode="wait">
                         {darkMode ? (
                             <motion.span
