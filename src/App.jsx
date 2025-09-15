@@ -1,7 +1,12 @@
-import { BrowserRouter, Route, Routes } from "react-router";
-import Applayout from "./ui/Applayout";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router";
+const Applayout = lazy(() => import("@ui/Applayout"));
+const About = lazy(() => import("@pages/About"));
+const Home = lazy(() => import("@pages/Home"));
+const Projects = lazy(() => import("@pages/Projects"));
+const Blog = lazy(() => import("@pages/Blog"));
+const Photos = lazy(() => import("@pages/Photos"));
 
 function App() {
     const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -16,15 +21,17 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Routes>
-                <Route element={<Applayout />}>
-                    <Route path="/" element={<p>Welcome here</p>} />
-                    <Route path="projects" element={<p>Projects here</p>} />
-                    <Route path="about" element={<p>About here</p>} />
-                    <Route path="blog" element={<p>Blogs here</p>} />
-                    <Route path="photos" element={<p>Photos here</p>} />
-                </Route>
-            </Routes>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route element={<Applayout />}>
+                        <Route path="/" element={<Home />} />
+                        <Route path="projects" element={<Projects />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="blog" element={<Blog />} />
+                        <Route path="photos" element={<Photos />} />
+                    </Route>
+                </Routes>
+            </Suspense>
         </BrowserRouter>
     );
 }

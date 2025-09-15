@@ -1,15 +1,15 @@
-import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
+import { cn } from "@lib/utils";
 
 function Container({ children, className, ...restProps }) {
     return (
-        <div
+        <motion.div
             className={cn("flex flex-col gap-5", className)}
             {...restProps}
         >
             {children}
-        </div>
+        </motion.div>
     );
 }
-
 
 export default Container;

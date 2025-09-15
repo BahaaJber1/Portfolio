@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@lib/utils";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import {
@@ -87,7 +87,7 @@ export const NavItems = ({ items, className, onItemClick }) => {
                 <NavLink
                     onMouseEnter={() => setHovered(idx)}
                     onClick={onItemClick}
-                    className="hover:text-bahaa-purple relative px-4 py-2 text-neutral-600 duration-300 dark:text-neutral-300"
+                    className="hover:text-bahaa-purple dark:hover:text-bahaa-purple relative px-4 py-2 text-neutral-600 duration-300 dark:text-neutral-300"
                     key={`link-${idx}`}
                     to={item.link}
                 >
@@ -168,16 +168,17 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
 };
 
 export const MobileNavToggle = ({ isOpen, onClick }) => {
-    return isOpen ? (
-        <RxHamburgerMenu
-            className="text-black dark:text-white"
-            onClick={onClick}
-        />
-    ) : (
-        <RxHamburgerMenu
-            className="text-black dark:text-white"
-            onClick={onClick}
-        />
+    return (
+        <motion.div
+            animate={{ rotate: isOpen ? 90 : 0 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+        >
+            <RxHamburgerMenu
+                className="h-6 w-6 text-black dark:text-white"
+                onClick={onClick}
+            />
+        </motion.div>
     );
 };
 
@@ -187,12 +188,7 @@ export const NavbarLogo = () => {
             to="/"
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
         >
-            <img
-                src="https://assets.aceternity.com/logo-dark.png"
-                alt="logo"
-                width={30}
-                height={30}
-            />
+            <img src="BahaaLogo.svg" alt="logo" width={30} height={30} />
             <span className="font-medium text-black dark:text-white">
                 Bahaa Jber
             </span>

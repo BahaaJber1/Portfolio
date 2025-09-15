@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
     --color-bahaa-black: #0f0e0e;
@@ -6,16 +7,9 @@
     --color-bahaa-white: #faf7f3;
 }
 
-/* body {
-    background-color: var(--color-bahaa-black);
-    color: var(--color-bahaa-white);
-} */
-
 .margins {
     @apply xl:mx-20;
 }
-
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 

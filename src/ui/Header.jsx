@@ -4,16 +4,19 @@ import {
     MobileNavMenu,
     MobileNavToggle,
     Navbar,
+    NavbarButton,
     NavbarLogo,
     NavBody,
     NavItems,
-    NavbarButton,
-} from "@/components/ui/resizable-navbar";
-import { toggleDarkMode } from "../features/darkmode/darkModeSlice";
+} from "@components/ui/resizable-navbar";
+import { toggleDarkMode } from "@features/darkmode/darkModeSlice";
 import { useState } from "react";
+import { CiDark, CiSun } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router";
-import { CiDark, CiSun } from "react-icons/ci";
+import Container from "./Container";
+import { cn } from "@lib/utils";
+import { AnimatePresence, motion } from "motion/react";
 
 const ROUTES = [
     { link: "/about", name: "About" },
@@ -29,7 +32,6 @@ function Header() {
 
     function handleToggleDarkMode() {
         dispatch(toggleDarkMode());
-        console.log("Dark mode toggled:", !darkMode);
     }
 
     return (
@@ -41,28 +43,92 @@ function Header() {
                     variant="secondary"
                     onClick={handleToggleDarkMode}
                 >
-                    {darkMode ? <CiDark size={20} /> : <CiSun size={20} />}
+                    <AnimatePresence mode="wait">
+                        {darkMode ? (
+                            <motion.span
+                                key="sun"
+                                initial={{ opacity: 0, rotate: 90 }}
+                                animate={{ opacity: 1, rotate: 0 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            >
+                                <CiSun
+                                    className={cn("text-bahaa-purple h-6 w-6")}
+                                />
+                            </motion.span>
+                        ) : (
+                            <motion.span
+                                key="dark"
+                                initial={{ opacity: 0, rotate: -90 }}
+                                animate={{ opacity: 1, rotate: 0 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            >
+                                <CiDark className={cn("h-6 w-6")} />
+                            </motion.span>
+                        )}
+                    </AnimatePresence>
                 </NavbarButton>
             </NavBody>
 
             <MobileNav>
                 <MobileNavHeader>
                     <NavbarLogo />
-                    <MobileNavToggle
-                        isOpen={isMobileMenuOpen}
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    />
-                    <MobileNavMenu isOpen={isMobileMenuOpen}>
-                        {ROUTES.map((route) => (
-                            <NavLink
-                                key={route.link}
-                                to={route.link}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                {route.name}
-                            </NavLink>
-                        ))}
-                    </MobileNavMenu>
+                    <Container className={cn("flex-row items-center gap-x-2")}>
+                        <NavbarButton
+                            variant="secondary"
+                            onClick={handleToggleDarkMode}
+                        >
+                            <AnimatePresence mode="wait">
+                                {darkMode ? (
+                                    <motion.span
+                                        key="sun-mobile"
+                                        initial={{ opacity: 0, rotate: 90 }}
+                                        animate={{ opacity: 1, rotate: 0 }}
+                                        exit={{ opacity: 0, rotate: -90 }}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 300,
+                                        }}
+                                    >
+                                        <CiSun
+                                            className={cn(
+                                                "text-bahaa-purple h-6 w-6",
+                                            )}
+                                        />
+                                    </motion.span>
+                                ) : (
+                                    <motion.span
+                                        key="dark-mobile"
+                                        initial={{ opacity: 0, rotate: -90 }}
+                                        animate={{ opacity: 1, rotate: 0 }}
+                                        exit={{ opacity: 0, rotate: 90 }}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 300,
+                                        }}
+                                    >
+                                        <CiDark className={cn("h-6 w-6")} />
+                                    </motion.span>
+                                )}
+                            </AnimatePresence>
+                        </NavbarButton>
+                        <MobileNavToggle
+                            isOpen={isMobileMenuOpen}
+                            onClick={() =>
+                                setIsMobileMenuOpen(!isMobileMenuOpen)
+                            }
+                        />
+                        <MobileNavMenu isOpen={isMobileMenuOpen}>
+                            {ROUTES.map((route) => (
+                                <NavLink
+                                    key={route.link}
+                                    to={route.link}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    {route.name}
+                                </NavLink>
+                            ))}
+                        </MobileNavMenu>
+                    </Container>
                 </MobileNavHeader>
             </MobileNav>
         </Navbar>
