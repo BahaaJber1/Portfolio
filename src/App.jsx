@@ -7,6 +7,7 @@ const Home = lazy(() => import("@pages/Home"));
 const Projects = lazy(() => import("@pages/Projects"));
 const Blog = lazy(() => import("@pages/Blog"));
 const Photos = lazy(() => import("@pages/Photos"));
+const Test = lazy(() => import("@pages/Test"));
 
 function App() {
     const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -29,6 +30,8 @@ function App() {
                         <Route path="about" element={<About />} />
                         <Route path="blog" element={<Blog />} />
                         <Route path="photos" element={<Photos />} />
+                        <Route path="test-component" element={<Test />} />
+                        <Route path="*" element={<div>404 Not Found</div>} />
                     </Route>
                 </Routes>
             </Suspense>
