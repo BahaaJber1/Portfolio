@@ -7,8 +7,8 @@
     --color-bahaa-white: #faf7f3;
 }
 
-.margins {
-    @apply xl:mx-20;
+.active {
+    @apply text-bahaa-purple scale-105 outline-bahaa-purple outline-1 rounded-full;
 }
 
 @custom-variant dark (&:is(.dark *));

@@ -1,5 +1,4 @@
-import React from "react";
-import { usePageTitle } from "@hooks/hooks.js";
+import usePageTitle from "@hooks/usePageTitle.js";
 
 function About() {
     usePageTitle("About");
