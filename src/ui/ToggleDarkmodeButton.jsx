@@ -1,9 +1,9 @@
-import { toggleDarkMode } from "@features/darkmode/darkModeSlice";
+import { toggleDarkMode } from "@store/slices/darkModeSlice";
 import { cn } from "@lib/utils";
 import { motion } from "motion/react";
 import { CiDark, CiSun } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
-import Container from "./Container";
+import Container from "./Container.jsx";
 
 export default function ToggleDarkmodeButton() {
     const darkMode = useSelector((state) => state.darkMode.darkMode);

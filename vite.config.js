@@ -12,10 +12,9 @@ export default defineConfig({
             "@features": resolve("./src/features"),
             "@ui": resolve("./src/ui"),
             "@store": resolve("./src/store"),
+            "@pages": resolve("./src/pages"),
             "@hooks": resolve("./src/hooks"),
             "@lib": resolve("./src/lib"),
-            "@pages": resolve("./src/pages"),
-            "@/": resolve("./src/"),
         },
     },
 });

@@ -2,16 +2,17 @@
 
 {
     "compilerOptions": {
+        "module": "nodenext",
         "baseUrl": "./src",
         "paths": {
-            "@components": ["./src/components/*"],
-            "@features": ["./src/features/*"],
-            "@ui": ["./src/ui/*"],
-            "@store": ["./src/store/*"],
-            "@hooks": ["./src/hooks/*"],
-            "@lib": ["./src/lib/*"],
-            "@pages": ["./src/pages/*"],
-            "@": ["./src/*"]
+            "@components/*": ["components/*"],
+            "@features/*": ["features/*"],
+            "@ui/*": ["ui/*"],
+            "@store/*": ["store/*"],
+            "@pages/*": ["pages/*"],
+            "@hooks/*": ["hooks/*"],
+            "@lib/*": ["lib/*"],
+            "@/*": ["*"]
         }
     }
 }

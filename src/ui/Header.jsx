@@ -9,11 +9,11 @@ import {
     NavBody,
     NavItems,
 } from "@components/ui/resizable-navbar";
-import { cn } from "@lib/utils";
 import { useState } from "react";
 import { NavLink } from "react-router";
-import Container from "./Container";
-import ToggleDarkmodeButton from "./ToggleDarkmodeButton";
+import Container from "./Container.jsx";
+import ToggleDarkmodeButton from "./ToggleDarkmodeButton.jsx";
+import { cn } from "@lib/utils.js";
 
 const ROUTES = [
     { link: "/about", name: "About" },
