@@ -5,6 +5,18 @@
     --color-bahaa-black: #0f0e0e;
     --color-bahaa-purple: #a294f9;
     --color-bahaa-white: #faf7f3;
+
+    --animate-shine: shine 5s linear infinite;
+}
+
+
+@keyframes shine {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -100%;
+    }
 }
 
 .active {

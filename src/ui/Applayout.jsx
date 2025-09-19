@@ -4,12 +4,12 @@ import Container from "./Container.jsx";
 
 function Applayout() {
     return (
-        <Container>
+        <>
             <Header />
             <main className="h-[5000px]">
                 <Outlet />
             </main>
-        </Container>
+        </>
     );
 }
 

@@ -1,5 +1,3 @@
-import HeroSection from "@ui/HeroSection.jsx";
-
 const headingItems = [
     "Full Stack Developer",
     "Open Source Enthusiast",
@@ -26,12 +24,4 @@ const image = {
     alt: "Bahaa Profile",
 };
 
-function Hero() {
-    return (
-        <>
-            <HeroSection heading={headingItems} text={text} image={image} />
-        </>
-    );
-}
-
-export default Hero;
+export { headingItems, text, image };

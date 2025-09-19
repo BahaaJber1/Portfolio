@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./Container.jsx";
 import { cn } from "@lib/utils.js";
 import TextType from "@components/TextType.jsx";
+import ShinyText from "@components/ShinyText.jsx";
 
 // Fix the responsive layout and ensure the image is displayed correctly
 
@@ -34,14 +35,14 @@ function HeroSection({ heading, text, image }) {
                     className="mb-6 text-5xl font-bold md:text-6xl lg:text-7xl"
                 />
 
-                <p
+                <ShinyText
                     className={cn(
                         "text-lg leading-8 text-black/70 md:text-xl lg:text-xl dark:text-white/70",
                         !image && "mx-auto max-w-3xl",
                     )}
-                >
-                    {text}
-                </p>
+                    speed={3}
+                    text={text}
+                />
             </Container>
             {image && (
                 <Container className={cn("items-center")}>

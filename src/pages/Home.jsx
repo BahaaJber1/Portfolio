@@ -1,4 +1,4 @@
-import Hero from "@components/bahaa/home/Hero.jsx";
+import Hero from "@components/bahaa/home/components/Hero.jsx";
 import usePageTitle from "@hooks/usePageTitle";
 import Container from "@ui/Container.jsx";
 import HeroSection from "@ui/HeroSection.jsx";
