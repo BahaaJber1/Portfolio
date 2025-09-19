@@ -40,7 +40,7 @@ function Header() {
             <MobileNav>
                 <MobileNavHeader>
                     <NavbarLogo />
-                    <Container className={cn("flex-row items-center gap-x-2")}>
+                    <div className={cn("flex flex-row items-center gap-x-2")}>
                         <NavbarButton variant="secondary">
                             <ToggleDarkmodeButton />
                         </NavbarButton>
@@ -61,7 +61,7 @@ function Header() {
                                 </NavLink>
                             ))}
                         </MobileNavMenu>
-                    </Container>
+                    </div>
                 </MobileNavHeader>
             </MobileNav>
         </Navbar>

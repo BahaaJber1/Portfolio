@@ -4,7 +4,10 @@ import { cn } from "@lib/utils";
 function Container({ children, className, ...restProps }) {
     return (
         <motion.div
-            className={cn("flex flex-col gap-5", className)}
+            className={cn(
+                "mx-auto flex w-full max-w-7xl flex-col gap-5",
+                className,
+            )}
             {...restProps}
         >
             {children}
