@@ -17,7 +17,7 @@ export default function ToggleDarkmodeButton() {
             )}
             onClick={() => dispatch(toggleDarkMode())}
         >
-            <motion.div
+            <motion.button
                 layout
                 transition={{
                     type: "spring",
@@ -30,7 +30,7 @@ export default function ToggleDarkmodeButton() {
                 ) : (
                     <CiDark className={cn("h-6 w-6")} />
                 )}
-            </motion.div>
+            </motion.button>
         </Container>
     );
 }

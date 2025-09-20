@@ -17,7 +17,7 @@ const headingItems = [
 ];
 
 const text =
-    "I'm Bahaa Jber, a passionate full-stack web developer focused on building practical, user-friendly applications. I enjoy sharing knowledge, and creating tools that make life easier for developers and everyday users alike.";
+    "I'm Bahaa Jber, a passionate full-stack web developer focused on creating tools that make life easier for developers and everyday users alike.";
 
 const image = {
     src: "BahaaLogo-transparent.svg",

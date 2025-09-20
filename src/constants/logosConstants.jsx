@@ -1,4 +1,10 @@
-import { SiLinkedin, SiGithub, SiFacebook, SiInstagram } from "react-icons/si";
+import {
+    SiLinkedin,
+    SiGithub,
+    SiFacebook,
+    SiInstagram,
+    SiX,
+} from "react-icons/si";
 
 const socialLinks = [
     {
@@ -20,6 +26,11 @@ const socialLinks = [
         node: <SiInstagram />,
         title: "Instagram",
         href: "https://www.instagram.com/bahaajber/",
+    },
+    {
+        node: <SiX />,
+        title: "X",
+        href: "https://x.com/Bahaa_Jber_",
     },
 ];
 

@@ -4,8 +4,6 @@ import { cn } from "@lib/utils.js";
 import TextType from "@components/TextType.jsx";
 import ShinyText from "@components/ShinyText.jsx";
 
-// Fix the responsive layout and ensure the image is displayed correctly
-
 function HeroSection({ heading, text, image }) {
     return (
         <Container
@@ -20,7 +18,9 @@ function HeroSection({ heading, text, image }) {
                 scale: { ease: "easeOut" },
             }}
         >
-            <Container className={cn("gap-10", !image && "text-center")}>
+            <Container
+                className={cn("justify-center", !image && "text-center")}
+            >
                 <TextType
                     text={heading}
                     as="h1"

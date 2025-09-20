@@ -6,10 +6,10 @@ function LogoSection() {
         <>
             <LogoLoop
                 logos={socialLinks}
-                speed={120}
+                speed={50}
                 logoHeight={60}
                 direction="left"
-                gap={60}
+                gap={80}
                 pauseOnHover
                 scaleOnHover
                 fadeOut

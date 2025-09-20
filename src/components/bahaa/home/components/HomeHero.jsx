@@ -1,12 +1,10 @@
 import HeroSection from "@ui/HeroSection.jsx";
-import { headingItems, text, image } from "../constants/heroConstants.js";
-import LogoSection from "@ui/Logos.jsx";
+import { headingItems, image, text } from "../constants/heroConstants.js";
 
 function Hero() {
     return (
         <>
             <HeroSection heading={headingItems} text={text} image={image} />
-            <LogoSection />
         </>
     );
 }

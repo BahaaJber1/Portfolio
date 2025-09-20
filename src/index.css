@@ -7,8 +7,12 @@
     --color-bahaa-white: #faf7f3;
 
     --animate-shine: shine 5s linear infinite;
+    --animate-gradient: gradient 5s linear infinite;
 }
 
+::selection {
+    @apply bg-bahaa-purple/20;
+}
 
 @keyframes shine {
     0% {
@@ -16,6 +20,18 @@
     }
     100% {
         background-position: -100%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
