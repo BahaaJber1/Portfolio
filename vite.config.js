@@ -14,6 +14,7 @@ export default defineConfig({
             "@store": resolve("./src/store"),
             "@pages": resolve("./src/pages"),
             "@hooks": resolve("./src/hooks"),
+            "@constants": resolve("./src/constants"),
             "@lib": resolve("./src/lib"),
         },
     },

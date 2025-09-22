@@ -39,10 +39,6 @@
     @apply text-bahaa-purple outline-bahaa-purple scale-105 rounded-full outline-1;
 }
 
-* {
-    @apply transition-colors duration-300 ease-linear;
-}
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

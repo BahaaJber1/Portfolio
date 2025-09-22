@@ -6,7 +6,7 @@ function Applayout() {
     return (
         <>
             <Header />
-            <main className="h-[5000px]">
+            <main>
                 <Outlet />
             </main>
         </>

@@ -8,7 +8,6 @@ import {
     Card as SCard,
 } from "@components/ui/card.jsx";
 import { cn } from "@lib/utils.js";
-import Container from "./Container.jsx";
 
 function Card({
     title,
@@ -23,7 +22,7 @@ function Card({
     return (
         <SCard
             {...props}
-            className={cn("w-[300px] text-center text-lg", className)}
+            className={cn("w-full text-center text-lg", className)}
         >
             <CardHeader>
                 <CardTitle>{title}</CardTitle>

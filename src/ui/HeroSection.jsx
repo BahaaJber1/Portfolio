@@ -32,7 +32,7 @@ function HeroSection({ heading, text, image }) {
                     startOnVisible={true}
                     loop={true}
                     cursorCharacter="_"
-                    className="mb-6 text-5xl font-bold md:text-6xl lg:text-7xl"
+                    className="mb-6 h-[120px] text-5xl font-bold md:text-6xl lg:text-7xl"
                 />
 
                 <ShinyText

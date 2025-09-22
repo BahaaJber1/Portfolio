@@ -1,101 +1,42 @@
-import CountUp from "@components/CountUp.jsx";
-import GradientText from "@components/GradientText.jsx";
-
 const cardData = [
     {
         title: "Years of Experience",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={2} />+
-            </GradientText>
-        ),
+        to: 2,
         text: "Years",
     },
     {
         title: "Hours of Coding",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={10000} />+
-            </GradientText>
-        ),
+        to: 10000,
         text: "Hours",
     },
     {
         title: "Days Learning",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={1200} />+
-            </GradientText>
-        ),
+        to: 1200,
         text: "Days",
     },
     {
         title: "Projects Completed",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={20} />+
-            </GradientText>
-        ),
+        to: 20,
         text: "Projects",
     },
     {
         title: "Lines of Code",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={100000} />+
-            </GradientText>
-        ),
+        to: 100000,
         text: "Lines",
     },
     {
         title: "Coffees Consumed",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={500} />+
-            </GradientText>
-        ),
+        to: 500,
         text: "Coffees",
     },
     {
         title: "GitHub Commits",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={1000} />+
-            </GradientText>
-        ),
+        to: 1000,
         text: "Commits",
     },
     {
         title: "Certificates Earned",
-        content: (
-            <GradientText
-                colors={["#a294f9", "#fff", "#a294f9"]}
-                animationSpeed={5}
-            >
-                <CountUp from={0} to={5} />+
-            </GradientText>
-        ),
+        to: 5,
         text: "Certificates",
     },
 ];
