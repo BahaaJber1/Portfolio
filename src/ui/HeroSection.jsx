@@ -46,11 +46,17 @@ function HeroSection({ heading, text, image }) {
             </Container>
             {image && (
                 <Container className={cn("items-center")}>
-                    <img
-                        src={image.src}
-                        alt={image.alt}
-                        className={cn("w-72 md:w-96 lg:w-100")}
-                    />
+                    {image.component ? (
+                        <span className={cn("w-72 md:w-96 lg:w-100")}>
+                            {image.component}
+                        </span>
+                    ) : (
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            className={cn("w-72 md:w-96 lg:w-100")}
+                        />
+                    )}
                 </Container>
             )}
         </Container>

@@ -1,3 +1,5 @@
+import AnimatedSvg from "@ui/AnimatedSvg.jsx";
+
 const headingItems = [
     "Full Stack Developer",
     "Open Source Enthusiast",
@@ -20,8 +22,7 @@ const text =
     "I'm Bahaa Jber, a passionate full-stack web developer focused on creating tools that make life easier for developers and everyday users alike.";
 
 const image = {
-    src: "BahaaLogo-transparent.svg",
-    alt: "Bahaa Profile",
+    component: <AnimatedSvg />,
 };
 
 export { headingItems, text, image };

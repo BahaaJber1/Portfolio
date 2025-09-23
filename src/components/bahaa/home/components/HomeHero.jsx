@@ -1,5 +1,5 @@
 import HeroSection from "@ui/HeroSection.jsx";
-import { headingItems, image, text } from "../constants/heroConstants.js";
+import { headingItems, image, text } from "../constants/heroConstants.jsx";
 
 function Hero() {
     return (

@@ -15,6 +15,7 @@ function HomeCard() {
         >
             {cardData.map((card, index) => (
                 <Card
+                    className={cn("shadow-lg")}
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.5 }}
                     key={index}
